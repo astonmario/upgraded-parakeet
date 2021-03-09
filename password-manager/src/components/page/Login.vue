@@ -10,6 +10,16 @@
             personal password manager
           </div>
         </div>
+        <div class="header-right">
+          用户登录
+        </div>
+    </div>
+    <div class="login-body">
+       <div class="login-box">
+         <div class="logo-box">
+          
+         </div>
+       </div>
     </div>
   </div>
 </template>
@@ -26,7 +36,7 @@ export default {
 
   mounted: {},
 
-  methods: {},
+  methods: {}
 };
 </script>
 <style lang='less' scoped>
@@ -38,20 +48,54 @@ export default {
   background-position: center center;
   background-size: 110% 100%;
 }
-.login-header { 
+.login-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 140px;
-  .header-left{
+  .header-left {
     margin-left: 100px;
-    .cn-title{
-        line-height: 40px;
-        font-size: 28px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.795);
+    .cn-title {
+      line-height: 40px;
+      font-size: 28px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.795);
     }
- }
+    .en-title {
+      line-height: 40px;
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.795);
+    }
+  }
+  .header-right {
+    margin-right: 100px;
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.795);
+  }
 }
+.login-body {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 240px;
+  .login-box {
+    width: 420px;
+    height: 500px;
+    padding: 28px 45px;
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 2px 34px 0 rgb(51 51 51 / 30%);
+    .logo-box{
+      width: 100%;
+      height: 220px;
+      background-image: url(../../assets/img/key-logo.jpg);
+      background-repeat:no-repeat;
 
+    }
+  }
+}
 </style>
