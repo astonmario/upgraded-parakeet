@@ -8,6 +8,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/dashboard'
+  },
+    {
+      path: '/',
       name: 'Login',
       component: Login
     }

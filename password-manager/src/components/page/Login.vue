@@ -2,24 +2,37 @@
 <template>
   <div class="login-container">
     <div class="login-header">
-        <div class="header-left">
-          <div class="cn-title">
-            个人密码管理
-          </div>
-          <div class="en-title">
-            personal password manager
-          </div>
-        </div>
-        <div class="header-right">
-          用户登录
-        </div>
+      <div class="header-left">
+        <div class="cn-title">个人密码管理</div>
+        <div class="en-title">personal password manager</div>
+      </div>
+      <div class="header-right">用户登录</div>
     </div>
     <div class="login-body">
-       <div class="login-box">
-         <div class="logo-box">
-          
-         </div>
-       </div>
+      <div class="login-box">
+        <div class="logo-box"></div>
+        <div class="login-form">
+          <el-form :model="loginForm">
+            <el-form-item>
+              <el-input
+                v-model="loginForm.userName"
+                placeholder="请输入用户名"
+              ></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-input
+                v-model="loginForm.password"
+                type="password"
+                placeholder="请输入密码"
+                show-password="true"
+              ></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" class="login-button" @click="onSubmit" >登录</el-button>
+            </el-form-item>
+          </el-form>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -27,7 +40,12 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      loginForm: {
+        userName: "",
+        password: "",
+      },
+    };
   },
 
   components: {},
@@ -36,17 +54,17 @@ export default {
 
   mounted: {},
 
-  methods: {}
+  methods: {},
 };
 </script>
 <style lang='less' scoped>
 .login-container {
-  height: 100%;
+  height: 1080px;
   width: 100%;
   position: relative;
   background-image: url(../../assets/img/bg_1.jpg);
   background-position: center center;
-  background-size: 110% 100%;
+  background-size: 100% 100%;
 }
 .login-header {
   display: flex;
@@ -89,12 +107,18 @@ export default {
     background-color: rgba(250, 250, 250, 0.5);
     border-radius: 10px;
     box-shadow: 0 2px 34px 0 rgb(51 51 51 / 30%);
-    .logo-box{
+    .logo-box {
       width: 100%;
       height: 220px;
       background-image: url(../../assets/img/key-logo.jpg);
-      background-repeat:no-repeat;
-
+      background-repeat: no-repeat;
+    }
+    .login-form {
+      margin-top: 30px;
+      .login-button {
+       width: 100%;
+       margin-top: 20px;
+      }
     }
   }
 }
