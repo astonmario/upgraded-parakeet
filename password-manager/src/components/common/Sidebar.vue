@@ -57,12 +57,12 @@ export default {
             collapse: false,
             items: [
                 {
-                    icon: 'el-icon-lx-home',
+                    icon: 'el-icon-s-home',
                     index: 'dashboard',
                     title: '系统首页'
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-orange',
                     index: 'table',
                     title: '基础表格'
                 },
@@ -98,7 +98,7 @@ export default {
     width: 0;
 }
 .sidebar-el-menu:not(.el-menu--collapse) {
-    width: 250px;
+    width: 170px;
 }
 .sidebar > ul {
     height: 100%;
